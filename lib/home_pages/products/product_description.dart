@@ -1,5 +1,5 @@
-import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
+import 'package:erg_web/shared/responsiveness.dart';
 
 class ProductDescription extends StatelessWidget {
   final bool isTablet;
@@ -16,9 +16,10 @@ class ProductDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Flex(
+        direction: isTablet ? Axis.horizontal : Axis.vertical,
+        mainAxisAlignment:
+            isTablet ? MainAxisAlignment.spaceAround : MainAxisAlignment.center,
         crossAxisAlignment:
             isTablet ? CrossAxisAlignment.center : CrossAxisAlignment.start,
         children: [
