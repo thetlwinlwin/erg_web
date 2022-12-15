@@ -10,15 +10,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Ever Rich Group',
       theme: myLightTheme,
       darkTheme: myDarkTheme,
       themeMode: ThemeMode.light,
-      home: PageControllerInherited(
+      home: HomePageControl(
         controller: PageController(),
         child: const HomePage(),
       ),

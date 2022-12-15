@@ -20,24 +20,24 @@ class PageOrder {
       };
 }
 
-class PageControllerInherited extends InheritedWidget {
+class HomePageControl extends InheritedWidget {
   final PageController controller;
 
-  const PageControllerInherited({
+  const HomePageControl({
     super.key,
     required this.controller,
     required super.child,
   });
 
-  static PageControllerInherited of(BuildContext context) {
-    final PageControllerInherited? result =
-        context.dependOnInheritedWidgetOfExactType<PageControllerInherited>();
+  static HomePageControl of(BuildContext context) {
+    final HomePageControl? result =
+        context.dependOnInheritedWidgetOfExactType<HomePageControl>();
     assert(result != null, 'No pagecontroller found in context');
     return result!;
   }
 
   @override
-  bool updateShouldNotify(PageControllerInherited oldWidget) => false;
+  bool updateShouldNotify(HomePageControl oldWidget) => false;
 
   void goto(int pageIndex) => controller.animateToPage(
         pageIndex,

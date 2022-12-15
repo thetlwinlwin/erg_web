@@ -1,6 +1,7 @@
 import 'package:erg_web/home_pages/products/desktop_products.dart';
 import 'package:erg_web/home_pages/products/mobile_products.dart';
 import 'package:erg_web/shared/responsiveness.dart';
+import 'package:erg_web/shared/sub_title.dart';
 import 'package:flutter/material.dart';
 
 class ProductsPageView extends StatelessWidget {
@@ -10,13 +11,9 @@ class ProductsPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Text(
-          'Available Products',
-          textAlign: TextAlign.left,
-          style: AppTextStyle.smallTitleStyle(context),
-        ),
-        const Expanded(
+      children: const [
+        SubTitle(titleText: 'Products'),
+        Expanded(
           child: ProductShowCase(),
         ),
       ],

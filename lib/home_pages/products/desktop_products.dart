@@ -20,7 +20,7 @@ class DesktopProductsPageView extends StatelessWidget {
           },
         ),
         child: FractionallySizedBox(
-          heightFactor: 0.65,
+          heightFactor: 0.6,
           child: PageView.builder(
             controller: PageController(viewportFraction: 0.6),
             itemCount: productList.length,

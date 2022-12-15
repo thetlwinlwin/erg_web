@@ -26,10 +26,6 @@ class MobileAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentPage =
-        PageControllerInherited.of(context).controller.page?.floor() ?? 0;
-    print(currentPage);
-
     return Container(
       color: Theme.of(context).colorScheme.primaryContainer,
       child: Row(
@@ -55,8 +51,7 @@ class DesktopAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = PageControllerInherited.of(context);
-
+    final controller = HomePageControl.of(context);
     return Container(
       color: Theme.of(context).colorScheme.primaryContainer,
       child: Row(
@@ -95,9 +90,31 @@ class CompanyName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'Ever Rich Group',
-      style: style,
+    return RichText(
+      text: TextSpan(
+        style: style,
+        children: [
+          TextSpan(
+            text: 'E',
+            style: style?.copyWith(
+              color: Colors.red,
+            ),
+          ),
+          const TextSpan(text: 'ver '),
+          TextSpan(
+            text: 'R',
+            style: style?.copyWith(
+              color: const Color.fromARGB(255, 41, 172, 24),
+            ),
+          ),
+          const TextSpan(text: 'ich '),
+          TextSpan(
+            text: 'G',
+            style: style?.copyWith(color: const Color(0xFFD97C31)),
+          ),
+          const TextSpan(text: 'roup'),
+        ],
+      ),
     );
   }
 }

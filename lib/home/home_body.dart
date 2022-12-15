@@ -6,7 +6,7 @@ class BodyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = PageControllerInherited.of(context).controller;
+    final controller = HomePageControl.of(context).controller;
     return PageView(
       onPageChanged: (value) {},
       controller: controller,

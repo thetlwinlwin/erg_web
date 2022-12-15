@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ProductDescription extends StatelessWidget {
   final bool isTablet;
-  final String description;
+  final String? description;
   final String name;
   const ProductDescription({
     Key? key,
@@ -26,11 +26,13 @@ class ProductDescription extends StatelessWidget {
             name,
             style: AppTextStyle.smallTitleStyle(context),
           ),
-          Text(
-            maxLines: 5,
-            description,
-            style: AppTextStyle.descriptionTextStyle(context),
-          ),
+          const SizedBox(height: 5),
+          if (description != null)
+            Text(
+              maxLines: 5,
+              description!,
+              style: AppTextStyle.descriptionTextStyle(context),
+            ),
         ],
       ),
     );

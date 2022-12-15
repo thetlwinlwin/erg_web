@@ -8,7 +8,7 @@ class MobileDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = PageControllerInherited.of(context).controller;
+    final controller = HomePageControl.of(context);
     final width = MediaQuery.of(context).size.width;
     return Drawer(
       width: width / 2,
@@ -20,7 +20,7 @@ class MobileDrawer extends StatelessWidget {
           ...PageOrder.page.entries
               .map(
                 (e) => CustomTextButton(
-                  onPressed: () => controller.jumpToPage(
+                  onPressed: () => controller.goto(
                     e.value,
                   ),
                   text: e.key,
