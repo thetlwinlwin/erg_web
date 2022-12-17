@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:erg_web/shared/page_inherited.dart';
-import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
 
 class BodyView extends StatelessWidget {
@@ -17,24 +16,14 @@ class BodyView extends StatelessWidget {
           PointerDeviceKind.mouse,
         },
       ),
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          if (constraints.maxWidth < ScreenSize.phone.maxWidth) {
-            return PageView(
-              controller: controller,
-              scrollDirection: Axis.vertical,
-              children: PageOrder.pageList,
-            );
-          }
-          return Scrollbar(
-            controller: controller,
-            child: PageView(
-              controller: controller,
-              scrollDirection: Axis.vertical,
-              children: PageOrder.pageList,
-            ),
-          );
-        },
+      child: Scrollbar(
+        controller: controller,
+        child: PageView(
+          controller: controller,
+          restorationId: 'This is same',
+          scrollDirection: Axis.vertical,
+          children: PageOrder.pageList,
+        ),
       ),
     );
   }
