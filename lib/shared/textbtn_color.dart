@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTextButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String text;
   final TextStyle? stlye;
 
@@ -48,6 +48,8 @@ class CustomTextButton extends StatelessWidget {
           states.contains(MaterialState.pressed) ||
           states.contains(MaterialState.focused)) {
         return specialColor;
+      } else if (states.contains(MaterialState.disabled)) {
+        return Colors.grey;
       }
       return defaultColor;
     }

@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:erg_web/shared/page_inherited.dart';
+import 'package:erg_web/shared/home_page_controller.dart';
 import 'package:flutter/material.dart';
 
 class BodyView extends StatelessWidget {

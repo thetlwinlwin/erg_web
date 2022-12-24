@@ -1,5 +1,5 @@
 import 'package:erg_web/shared/logo_image.dart';
-import 'package:erg_web/shared/page_inherited.dart';
+import 'package:erg_web/shared/home_page_controller.dart';
 import 'package:erg_web/shared/textbtn_color.dart';
 import 'package:flutter/material.dart';
 

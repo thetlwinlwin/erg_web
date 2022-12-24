@@ -43,4 +43,19 @@ class AppTextStyle {
       overflow: TextOverflow.fade,
     );
   }
+
+  static TextStyle errorTextStyle(BuildContext context) {
+    return TextStyle(
+      color: Theme.of(context).errorColor,
+      fontWeight: FontWeight.w500,
+    );
+  }
+
+  static TextStyle callBtnTextStyle(BuildContext context) {
+    return TextStyle(
+      color: Theme.of(context).colorScheme.primary,
+      fontWeight: FontWeight.w700,
+      fontSize: 18,
+    );
+  }
 }
