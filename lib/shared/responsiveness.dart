@@ -41,6 +41,7 @@ class AppTextStyle {
       color: Theme.of(context).colorScheme.onBackground,
       fontWeight: FontWeight.w500,
       overflow: TextOverflow.fade,
+      fontSize: 16,
     );
   }
 

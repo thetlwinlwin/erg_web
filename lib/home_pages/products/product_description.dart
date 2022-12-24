@@ -18,8 +18,9 @@ class ProductDescription extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Flex(
         direction: isTablet ? Axis.horizontal : Axis.vertical,
-        mainAxisAlignment:
-            isTablet ? MainAxisAlignment.spaceAround : MainAxisAlignment.center,
+        mainAxisAlignment: isTablet && description != null
+            ? MainAxisAlignment.spaceAround
+            : MainAxisAlignment.center,
         crossAxisAlignment:
             isTablet ? CrossAxisAlignment.center : CrossAxisAlignment.start,
         children: [

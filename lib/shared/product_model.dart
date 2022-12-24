@@ -12,40 +12,40 @@ class Product {
 List<Product> productList = [
   Product(
     name: 'C_Channel',
-    description: 'thickness - 0.5mm to 2mm\nlength - any length',
+    description: 'thickness(mm) - 0.5 to 2\nlength(m) - any length',
   ),
   Product(
     name: 'Deck_Sheet',
-    description: 'thickness - 0.75mm to 2mm\nlength - any length',
+    description: 'thickness(mm) - 0.75 to 2\nlength(m) - any length',
   ),
   Product(
     name: 'Hollow',
     description:
-        '1/2" x 1/2" to 3" x 3"\nthickness - 0.75mm to 1.8mm\nlength - up to 6m',
+        '1/2" x 1/2" to 3" x 3"\nthickness(mm) - 0.75 to 1.8\nlength(m)- up to 6',
   ),
   Product(
     name: 'Omega',
-    description: 'thickness - 0.8mm to 1.5mm\nlength - up to 6m',
+    description: 'thickness(mm) - 0.8 to 1.5\nlength(m) - up to 6',
   ),
   Product(
     name: 'Roof',
     description:
-        'thickness - 0.25mm to 0.45mm\ncolor - multiple colors\nlength - any length',
+        'thickness(mm) - 0.25 to 0.45\ncolor - multiple colors\nlength(m) - any length',
   ),
   Product(
     name: 'Gutter',
     description:
-        'thickness - 0.25mm to 1.8mm\ncolor - multiple colors\nlength - up to 6m\ndesign - different design',
+        'thickness(mm) - 0.25 to 1.8\ncolor - multiple colors\nlength(m) - up to 6\ndesign - different design',
   ),
   Product(
     name: 'Ridge Top',
     description:
-        'thickness - 0.25mm to 1.8mm\ncolor - multiple colors\nlength - up to 6m\ndesign - different design',
+        'thickness(mm) - 0.25 to 1.8\ncolor - multiple colors\nlength(m) - up to 6\ndesign - different design',
   ),
   Product(
     name: 'Sun_Shade',
     description:
-        'thickness - 0.25mm to 1.8mm\ncolor - multiple colors\nlength - up to 6m\ndesign - different design',
+        'thickness(mm) - 0.25 to 1.8\ncolor - multiple colors\nlength(m) - up to 6\ndesign - different design',
   ),
   Product(
     name: 'U_Beam',
