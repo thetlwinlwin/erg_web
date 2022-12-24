@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:erg_web/shared/decorated_container.dart';
 import 'package:flutter/material.dart';
 
 import 'package:erg_web/home_pages/products/product_description.dart';
@@ -63,14 +64,7 @@ class TabletProductCard extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context)
-                    .colorScheme
-                    .secondaryContainer
-                    .withOpacity(0.5),
-                borderRadius: BorderRadius.circular(10),
-              ),
+            child: CustomContainer(
               child: ProductDescription(
                 isTablet: true,
                 description: product.description,
@@ -93,13 +87,9 @@ class DesktopProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return CustomContainer(
       margin: const EdgeInsets.symmetric(
         horizontal: 20,
-      ),
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.secondaryContainer,
-        borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,

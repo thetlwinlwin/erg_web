@@ -25,7 +25,7 @@ class ShopBtn extends StatelessWidget {
     if (!result) {
       final toCopy = await showDialog<bool>(
             context: context,
-            builder: (context) => const MapAlertDialog(),
+            builder: (context) => const _MapAlertDialog(),
             useSafeArea: true,
           ) ??
           false;
@@ -43,8 +43,8 @@ class ShopBtn extends StatelessWidget {
   }
 }
 
-class MapAlertDialog extends StatelessWidget {
-  const MapAlertDialog({
+class _MapAlertDialog extends StatelessWidget {
+  const _MapAlertDialog({
     Key? key,
   }) : super(key: key);
 

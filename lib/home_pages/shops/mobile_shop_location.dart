@@ -1,8 +1,9 @@
-import 'package:erg_web/home_pages/shops/call_now_btn.dart';
+import 'package:erg_web/home_pages/shops/dial_btn.dart';
+import 'package:erg_web/shared/decorated_container.dart';
 import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
 
-import 'package:erg_web/home_pages/shops/jump_to_map_btn.dart';
+import 'package:erg_web/home_pages/shops/location_btn.dart';
 import 'package:erg_web/shared/shop_model.dart';
 import 'package:erg_web/shared/sub_title.dart';
 
@@ -87,11 +88,7 @@ class ShopLocationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: Theme.of(context).colorScheme.secondaryContainer,
-      ),
+    return CustomContainer(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Wrap(
         runSpacing: 10,
