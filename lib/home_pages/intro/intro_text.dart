@@ -1,13 +1,12 @@
-import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
 
+import 'package:erg_web/shared/responsiveness.dart';
+
 class IntroPageText extends StatelessWidget {
-  final double fontSize;
-  final double welcomeSize;
+  final IntroPageTextSize introPageSizeEnum;
   const IntroPageText({
     Key? key,
-    required this.fontSize,
-    required this.welcomeSize,
+    required this.introPageSizeEnum,
   }) : super(key: key);
 
   @override
@@ -29,14 +28,14 @@ class IntroPageText extends StatelessWidget {
           Text(
             'Welcome',
             style: AppTextStyle.introTextStyle(
-              size: welcomeSize,
+              textSize: introPageSizeEnum.welcomeTxtSize,
             ),
           ),
           FittedBox(
             child: Text(
               'Our products will serve the extended life.',
               style: AppTextStyle.introTextStyle(
-                size: fontSize,
+                textSize: introPageSizeEnum.bodyTxtSize,
               ),
             ),
           ),

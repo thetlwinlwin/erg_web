@@ -9,6 +9,46 @@ enum ScreenSize {
   const ScreenSize(this.maxWidth);
 }
 
+enum IntroPageTextSize {
+  desktop(
+    welcomeTxtSize: 40,
+    bodyTxtSize: 30,
+  ),
+  phone(
+    welcomeTxtSize: 24,
+    bodyTxtSize: 20,
+  );
+
+  final double welcomeTxtSize;
+  final double bodyTxtSize;
+  const IntroPageTextSize({
+    required this.welcomeTxtSize,
+    required this.bodyTxtSize,
+  });
+}
+
+enum ShopPageTextSize {
+  phone(
+    addressTxtSize: 16,
+    locationTxtSize: 16,
+    callNowTxtSize: 14,
+  ),
+  desktop(
+    addressTxtSize: 20,
+    locationTxtSize: 20,
+    callNowTxtSize: 16,
+  );
+
+  final double addressTxtSize;
+  final double locationTxtSize;
+  final double callNowTxtSize;
+  const ShopPageTextSize({
+    required this.addressTxtSize,
+    required this.locationTxtSize,
+    required this.callNowTxtSize,
+  });
+}
+
 class AppTextStyle {
   static TextStyle smallTitleStyle(BuildContext context) {
     final color = Theme.of(context).colorScheme.onPrimaryContainer;
@@ -28,11 +68,11 @@ class AppTextStyle {
     );
   }
 
-  static TextStyle introTextStyle({required double size}) {
+  static TextStyle introTextStyle({required double textSize}) {
     return TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w700,
-      fontSize: size,
+      fontSize: textSize,
     );
   }
 
@@ -41,7 +81,13 @@ class AppTextStyle {
       color: Theme.of(context).colorScheme.onBackground,
       fontWeight: FontWeight.w500,
       overflow: TextOverflow.fade,
-      fontSize: 16,
+    );
+  }
+
+  static TextStyle defaultTextStyle(double textSize) {
+    return TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: textSize,
     );
   }
 
@@ -52,7 +98,7 @@ class AppTextStyle {
     );
   }
 
-  static TextStyle callBtnTextStyle(BuildContext context) {
+  static TextStyle numberChosingDialogTitleStyle(BuildContext context) {
     return TextStyle(
       color: Theme.of(context).colorScheme.primary,
       fontWeight: FontWeight.w700,

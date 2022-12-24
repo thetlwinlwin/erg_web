@@ -32,7 +32,7 @@ class MobileAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           const LogoImage(),
-          CompanyName(
+          _CompanyName(
             style: AppTextStyle.smallTitleStyle(context),
           ),
           IconButton(
@@ -60,7 +60,7 @@ class DesktopAppBar extends StatelessWidget {
           Row(
             children: [
               const LogoImage(),
-              CompanyName(
+              _CompanyName(
                 style: AppTextStyle.largeTitleStyle(context),
               ),
             ],
@@ -81,12 +81,12 @@ class DesktopAppBar extends StatelessWidget {
   }
 }
 
-class CompanyName extends StatelessWidget {
-  const CompanyName({
+class _CompanyName extends StatelessWidget {
+  const _CompanyName({
     Key? key,
     required this.style,
   }) : super(key: key);
-  final TextStyle? style;
+  final TextStyle style;
 
   @override
   Widget build(BuildContext context) {
@@ -96,21 +96,21 @@ class CompanyName extends StatelessWidget {
         children: [
           TextSpan(
             text: 'E',
-            style: style?.copyWith(
+            style: style.copyWith(
               color: Colors.red,
             ),
           ),
           const TextSpan(text: 'ver '),
           TextSpan(
             text: 'R',
-            style: style?.copyWith(
+            style: style.copyWith(
               color: const Color.fromARGB(255, 41, 172, 24),
             ),
           ),
           const TextSpan(text: 'ich '),
           TextSpan(
             text: 'G',
-            style: style?.copyWith(color: const Color(0xFFD97C31)),
+            style: style.copyWith(color: const Color(0xFFD97C31)),
           ),
           const TextSpan(text: 'roup'),
         ],

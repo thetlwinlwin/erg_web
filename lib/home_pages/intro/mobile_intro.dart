@@ -1,4 +1,5 @@
 import 'package:erg_web/home_pages/intro/intro_text.dart';
+import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
 
 class MobileIntroPageView extends StatelessWidget {
@@ -20,8 +21,7 @@ class MobileIntroPageView extends StatelessWidget {
           right: 20.0,
         ),
         child: IntroPageText(
-          welcomeSize: 24,
-          fontSize: 20,
+          introPageSizeEnum: IntroPageTextSize.phone,
         ),
       ),
     );

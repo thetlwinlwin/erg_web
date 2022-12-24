@@ -1,11 +1,8 @@
-import 'package:erg_web/home_pages/shops/dial_btn.dart';
-import 'package:erg_web/shared/decorated_container.dart';
+import 'package:erg_web/home_pages/shops/shop_location_card.dart';
 import 'package:erg_web/shared/responsiveness.dart';
-import 'package:flutter/material.dart';
-
-import 'package:erg_web/home_pages/shops/location_btn.dart';
 import 'package:erg_web/shared/shop_model.dart';
 import 'package:erg_web/shared/sub_title.dart';
+import 'package:flutter/material.dart';
 
 class MobileShopLocationPage extends StatelessWidget {
   const MobileShopLocationPage({super.key});
@@ -20,7 +17,7 @@ class MobileShopLocationPage extends StatelessWidget {
             indicatorColor: Theme.of(context).primaryColor,
             indicatorWeight: 6,
             labelColor: Theme.of(context).colorScheme.primary,
-            unselectedLabelColor: Colors.black.withOpacity(0.6),
+            unselectedLabelColor: Colors.black.withOpacity(0.8),
             tabs: shopList
                 .map(
                   (e) => Tab(text: e.name),
@@ -53,11 +50,11 @@ class ShopLocationContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image(
-          height: double.infinity,
-          width: double.infinity,
-          image: AssetImage(model.imgPath),
-          fit: BoxFit.cover,
+        Positioned.fill(
+          child: Image(
+            image: AssetImage(model.imgPath),
+            fit: BoxFit.cover,
+          ),
         ),
         Positioned(
           top: 10,
@@ -72,42 +69,10 @@ class ShopLocationContainer extends StatelessWidget {
           right: 10,
           child: ShopLocationCard(
             model: model,
+            textSizeEnum: ShopPageTextSize.phone,
           ),
         ),
       ],
-    );
-  }
-}
-
-class ShopLocationCard extends StatelessWidget {
-  final ShopModel model;
-  const ShopLocationCard({
-    Key? key,
-    required this.model,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return CustomContainer(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      child: Wrap(
-        runSpacing: 10,
-        spacing: 5,
-        children: [
-          Text(
-            model.physicalAddress,
-            maxLines: 5,
-            style: AppTextStyle.descriptionTextStyle(context),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ShopBtn(shopModel: model),
-              CallNowBtn(model: model),
-            ],
-          ),
-        ],
-      ),
     );
   }
 }

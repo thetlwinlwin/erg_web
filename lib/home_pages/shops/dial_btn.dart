@@ -1,13 +1,16 @@
-import 'package:erg_web/shared/responsiveness.dart';
-import 'package:erg_web/shared/shop_model.dart';
-import 'package:erg_web/shared/textbtn_color.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:erg_web/shared/responsiveness.dart';
+import 'package:erg_web/shared/shop_model.dart';
+import 'package:erg_web/shared/textbtn_color.dart';
+
 class CallNowBtn extends StatelessWidget {
   final ShopModel model;
+  final double? textSize;
   const CallNowBtn({
     Key? key,
+    this.textSize,
     required this.model,
   }) : super(key: key);
 
@@ -16,6 +19,7 @@ class CallNowBtn extends StatelessWidget {
     return CustomTextButton(
       onPressed: () => _dial(context),
       text: 'Call Now',
+      textSize: textSize,
     );
   }
 
@@ -28,7 +32,7 @@ class CallNowBtn extends StatelessWidget {
             'Choose one number',
             textAlign: TextAlign.center,
           ),
-          titleTextStyle: AppTextStyle.callBtnTextStyle(context),
+          titleTextStyle: AppTextStyle.numberChosingDialogTitleStyle(context),
           contentPadding: const EdgeInsets.all(20),
           children: model.getPhones
               .map(

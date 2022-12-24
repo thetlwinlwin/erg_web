@@ -1,13 +1,14 @@
+import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String text;
-  final TextStyle? stlye;
+  final double? textSize;
 
   const CustomTextButton({
     Key? key,
-    this.stlye,
+    this.textSize = 18,
     required this.onPressed,
     required this.text,
   }) : super(key: key);
@@ -30,11 +31,7 @@ class CustomTextButton extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: stlye ??
-            const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
+        style: AppTextStyle.defaultTextStyle(textSize!),
       ),
     );
   }

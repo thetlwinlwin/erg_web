@@ -1,5 +1,6 @@
 import 'package:erg_web/home_pages/intro/intro_text.dart';
 import 'package:erg_web/shared/decorated_container.dart';
+import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
 
 class DesktopIntroPageView extends StatelessWidget {
@@ -20,8 +21,7 @@ class DesktopIntroPageView extends StatelessWidget {
           child: const CustomContainer(
             padding: EdgeInsets.all(20),
             child: IntroPageText(
-              fontSize: 30,
-              welcomeSize: 40,
+              introPageSizeEnum: IntroPageTextSize.desktop,
             ),
           ),
         ),
