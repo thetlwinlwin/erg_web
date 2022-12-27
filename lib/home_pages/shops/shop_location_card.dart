@@ -19,9 +19,8 @@ class ShopLocationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomContainer(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      child: Wrap(
-        runSpacing: 10,
-        spacing: 5,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
             model.physicalAddress,
@@ -30,8 +29,12 @@ class ShopLocationCard extends StatelessWidget {
               textSizeEnum.addressTxtSize,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          const SizedBox(
+            height: 10,
+          ),
+          Wrap(
+            alignment: WrapAlignment.start,
+            spacing: 10,
             children: [
               ShopBtn(
                 shopModel: model,

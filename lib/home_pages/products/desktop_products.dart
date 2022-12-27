@@ -98,7 +98,7 @@ class DesktopProductCard extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Image(
                 image: AssetImage(product.imgPath),
               ),

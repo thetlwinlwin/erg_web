@@ -12,8 +12,8 @@ class SubTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: 10,
-        left: 10,
+        top: 20,
+        left: 20,
       ),
       child: Text(
         titleText,

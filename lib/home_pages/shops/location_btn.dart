@@ -60,7 +60,7 @@ class _MapAlertDialog extends StatelessWidget {
     return AlertDialog(
       title: const Text('Cannot open Google Map'),
       content: const Text('Would you like to copy the location?'),
-      contentPadding: const EdgeInsets.all(10),
+      contentPadding: const EdgeInsets.all(20),
       actions: [
         TextButton(
           onPressed: () {
