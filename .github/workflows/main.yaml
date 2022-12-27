@@ -15,6 +15,7 @@ jobs:
           flutter pub get
           flutter build web --web-renderer html
         working-directory: ./
+
       - name: Deploy to firebase
         uses: w9jds/firebase-action@master
         with:
