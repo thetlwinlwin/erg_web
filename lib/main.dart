@@ -4,6 +4,7 @@ import 'package:erg_web/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -15,7 +16,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ever Rich Group',
       theme: myLightTheme,
-      darkTheme: myDarkTheme,
       themeMode: ThemeMode.light,
       home: HomePageControl(
         controller: PageController(),
