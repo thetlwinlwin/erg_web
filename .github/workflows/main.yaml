@@ -1,0 +1,24 @@
+name: Deployment
+on: push
+jobs:
+  hosting:
+    name: Deploy ERG website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+      - name: Building website
+        run: |
+          flutter config --enable-web
+          flutter pub get
+          flutter build web --web-renderer html
+        working-directory: ./
+      - name: Deploy to firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:ever-rich-group-web
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_PATH: ./
