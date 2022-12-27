@@ -9,14 +9,14 @@ class PageOrder {
         IntroPageView(),
         ProductsPageView(),
         ShopPageView(),
-        AboutPageView(),
+        ContactPageView(),
       ];
 
   static Map<String, int> get page => {
         'Home': 0,
         'Products': 1,
         'Shops': 2,
-        'About Us': 3,
+        'Contact Us': 3,
       };
 }
 
