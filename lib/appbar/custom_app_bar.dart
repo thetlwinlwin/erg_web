@@ -27,7 +27,7 @@ class MobileAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Theme.of(context).colorScheme.primaryContainer,
+      color: Theme.of(context).primaryColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -53,7 +53,7 @@ class DesktopAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = HomePageControl.of(context);
     return Container(
-      color: Theme.of(context).colorScheme.primaryContainer,
+      color: Theme.of(context).primaryColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

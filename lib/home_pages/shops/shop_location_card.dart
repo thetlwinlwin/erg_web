@@ -25,8 +25,9 @@ class ShopLocationCard extends StatelessWidget {
           Text(
             model.physicalAddress,
             maxLines: 5,
-            style: AppTextStyle.defaultTextStyle(
-              textSizeEnum.addressTxtSize,
+            style: AppTextStyle.descriptionTextStyle(
+              context,
+              textSize: textSizeEnum.addressTxtSize,
             ),
           ),
           const SizedBox(

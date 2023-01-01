@@ -14,9 +14,9 @@ class MobileShopLocationPage extends StatelessWidget {
       child: Column(
         children: [
           TabBar(
-            indicatorColor: Theme.of(context).primaryColor,
+            indicatorColor: Theme.of(context).colorScheme.onPrimaryContainer,
             indicatorWeight: 6,
-            labelColor: Theme.of(context).colorScheme.primary,
+            labelColor: Theme.of(context).colorScheme.onPrimaryContainer,
             unselectedLabelColor: Colors.black.withOpacity(0.8),
             tabs: shopList
                 .map(

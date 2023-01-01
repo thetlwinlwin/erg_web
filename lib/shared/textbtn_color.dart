@@ -15,7 +15,7 @@ class CustomTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final primaryColor = Theme.of(context).colorScheme.primary;
+    final primaryColor = Theme.of(context).colorScheme.onPrimaryContainer;
     final onsurfaceColor = Theme.of(context).colorScheme.surface;
     return TextButton(
       onPressed: onPressed,

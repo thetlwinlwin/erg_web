@@ -51,7 +51,7 @@ enum ShopPageTextSize {
 
 class AppTextStyle {
   static TextStyle smallTitleStyle(BuildContext context) {
-    final color = Theme.of(context).colorScheme.onPrimaryContainer;
+    final color = Theme.of(context).colorScheme.onSurface;
     return TextStyle(
       color: color,
       fontWeight: FontWeight.w700,
@@ -60,7 +60,7 @@ class AppTextStyle {
   }
 
   static TextStyle largeTitleStyle(BuildContext context) {
-    final color = Theme.of(context).colorScheme.onPrimaryContainer;
+    final color = Theme.of(context).colorScheme.onSurface;
     return TextStyle(
       color: color,
       fontWeight: FontWeight.w700,
@@ -76,11 +76,13 @@ class AppTextStyle {
     );
   }
 
-  static TextStyle descriptionTextStyle(BuildContext context) {
+  static TextStyle descriptionTextStyle(BuildContext context,
+      {double? textSize}) {
     return TextStyle(
       color: Theme.of(context).colorScheme.onBackground,
       fontWeight: FontWeight.w500,
       overflow: TextOverflow.fade,
+      fontSize: textSize,
     );
   }
 
@@ -100,7 +102,7 @@ class AppTextStyle {
 
   static TextStyle numberChosingDialogTitleStyle(BuildContext context) {
     return TextStyle(
-      color: Theme.of(context).colorScheme.primary,
+      color: Theme.of(context).colorScheme.onPrimaryContainer,
       fontWeight: FontWeight.w700,
       fontSize: 18,
     );

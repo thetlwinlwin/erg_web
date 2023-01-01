@@ -20,7 +20,9 @@ class ShopBtn extends StatelessWidget {
       onPressed: () => _launchingUri(context),
       child: Text(
         'Get Direction',
-        style: AppTextStyle.defaultTextStyle(textSize),
+        style: AppTextStyle.defaultTextStyle(textSize).copyWith(
+          color: Theme.of(context).colorScheme.onPrimaryContainer,
+        ),
       ),
     );
   }

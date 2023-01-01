@@ -1,11 +1,9 @@
 import 'dart:ui';
-
 import 'package:erg_web/shared/decorated_container.dart';
+import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
-
 import 'package:erg_web/home_pages/products/product_description.dart';
 import 'package:erg_web/shared/product_model.dart';
-import 'package:erg_web/shared/responsiveness.dart';
 
 class DesktopProductsPageView extends StatelessWidget {
   const DesktopProductsPageView({super.key});
@@ -48,7 +46,7 @@ class TabletProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return CustomContainer(
       margin: const EdgeInsets.symmetric(
         horizontal: 20,
       ),
@@ -56,15 +54,15 @@ class TabletProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            flex: 3,
-            child: Image(
-              image: AssetImage(product.imgPath),
-              fit: BoxFit.scaleDown,
+            child: Center(
+              child: Image(
+                image: AssetImage(product.imgPath),
+                fit: BoxFit.scaleDown,
+              ),
             ),
           ),
           Expanded(
-            flex: 2,
-            child: CustomContainer(
+            child: Center(
               child: ProductDescription(
                 isTablet: true,
                 description: product.description,

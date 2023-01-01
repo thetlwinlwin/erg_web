@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 const _lightColorScheme = ColorScheme(
   brightness: Brightness.light,
-  primary: Color(0xFF0B6E0B),
+  primary: Color(0xFF9BF988),
   onPrimary: Color(0xFFFFFFFF),
   primaryContainer: Color(0xFF9BF988),
-  onPrimaryContainer: Color(0xFF002200),
+  onPrimaryContainer: Color(0xFF0B6E0B),
   secondary: Color(0xFF54634E),
   onSecondary: Color(0xFFFFFFFF),
   secondaryContainer: Color(0xFFD7E8CD),
@@ -32,44 +32,7 @@ const _lightColorScheme = ColorScheme(
   surfaceTint: Color(0xFF0B6E0B),
 );
 
-const _darkColorScheme = ColorScheme(
-  brightness: Brightness.dark,
-  primary: Color(0xFF80DC6E),
-  onPrimary: Color(0xFF003A01),
-  primaryContainer: Color(0xFF005303),
-  onPrimaryContainer: Color(0xFF9BF988),
-  secondary: Color(0xFFBBCBB2),
-  onSecondary: Color(0xFF263422),
-  secondaryContainer: Color(0xFF3C4B37),
-  onSecondaryContainer: Color(0xFFD7E8CD),
-  tertiary: Color(0xFFA0CFD2),
-  onTertiary: Color(0xFF00373A),
-  tertiaryContainer: Color(0xFF1E4D51),
-  onTertiaryContainer: Color(0xFFBCEBEE),
-  error: Color(0xFFFFB4AB),
-  errorContainer: Color(0xFF93000A),
-  onError: Color(0xFF690005),
-  onErrorContainer: Color(0xFFFFDAD6),
-  background: Color(0xFF1A1C18),
-  onBackground: Color(0xFFE2E3DD),
-  surface: Color(0xFF1A1C18),
-  onSurface: Color(0xFFE2E3DD),
-  surfaceVariant: Color(0xFF43483F),
-  onSurfaceVariant: Color(0xFFC3C8BC),
-  outline: Color(0xFF8D9387),
-  onInverseSurface: Color(0xFF1A1C18),
-  inverseSurface: Color(0xFFE2E3DD),
-  inversePrimary: Color(0xFF0B6E0B),
-  shadow: Color(0xFF000000),
-  surfaceTint: Color(0xFF80DC6E),
-);
-
 ThemeData myLightTheme = ThemeData.from(
   colorScheme: _lightColorScheme,
-  useMaterial3: true,
-);
-
-ThemeData myDarkTheme = ThemeData.from(
-  colorScheme: _darkColorScheme,
   useMaterial3: true,
 );
