@@ -22,7 +22,7 @@ class DesktopProductsPageView extends StatelessWidget {
           heightFactor:
               constraints.maxWidth <= ScreenSize.tablet.maxWidth ? 0.75 : 0.6,
           child: PageView.builder(
-            controller: PageController(viewportFraction: 0.5),
+            controller: PageController(viewportFraction: 0.6),
             itemCount: productList.length,
             itemBuilder: (context, index) {
               if (constraints.maxWidth <= ScreenSize.tablet.maxWidth) {
