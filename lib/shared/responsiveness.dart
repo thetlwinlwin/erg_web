@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 enum ScreenSize {
-  phone(650),
+  phone(700),
   tablet(1000),
   dekstop(4080);
 

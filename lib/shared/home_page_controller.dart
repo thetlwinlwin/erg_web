@@ -1,4 +1,4 @@
-import 'package:erg_web/home_pages/contact/contact_page_view.dart';
+import 'package:erg_web/home_pages/about/about_page_view.dart';
 import 'package:erg_web/home_pages/intro/intro_page_view.dart';
 import 'package:erg_web/home_pages/products/products_page_view.dart';
 import 'package:erg_web/home_pages/shops/shop_page_view.dart';
@@ -9,14 +9,15 @@ class PageOrder {
         IntroPageView(),
         ProductsPageView(),
         ShopPageView(),
-        ContactPageView(),
+        AboutPageView(),
       ];
 
   static Map<String, int> get page => {
         'Home': 0,
         'Products': 1,
         'Shops': 2,
-        'Contact Us': 3,
+        'About': 3,
+        'Contact Us': 4,
       };
 }
 
