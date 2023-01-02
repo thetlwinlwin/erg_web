@@ -19,13 +19,13 @@ class DesktopProductsPageView extends StatelessWidget {
           },
         ),
         child: FractionallySizedBox(
-          heightFactor: 0.6,
+          heightFactor:
+              constraints.maxWidth <= ScreenSize.tablet.maxWidth ? 0.75 : 0.6,
           child: PageView.builder(
-            controller: PageController(viewportFraction: 0.6),
+            controller: PageController(viewportFraction: 0.5),
             itemCount: productList.length,
             itemBuilder: (context, index) {
-              if (constraints.maxWidth > ScreenSize.phone.maxWidth &&
-                  constraints.maxWidth <= ScreenSize.tablet.maxWidth) {
+              if (constraints.maxWidth <= ScreenSize.tablet.maxWidth) {
                 return TabletProductCard(product: productList[index]);
               }
               return DesktopProductCard(product: productList[index]);
