@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       drawer: const MobileDrawer(),
       appBar: PreferredSize(
         preferredSize: maxWidth <= ScreenSize.tablet.maxWidth
-            ? const Size.fromHeight(80)
+            ? const Size.fromHeight(60)
             : const Size.fromHeight(100),
         child: const AppBarContent(),
       ),
