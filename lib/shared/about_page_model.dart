@@ -9,6 +9,7 @@ class _VisionMission {
     'To become customer-centric company, where cutomers can safely rely upon us for excellent products.',
     'To become customer-centric company, where cutomers can safely rely upon us for excellent products.',
     'To become customer-centric company, where cutomers can safely rely upon us for excellent products.',
+    'To become customer-centric company, where cutomers can safely rely upon us for excellent products.',
   ];
   final String _history =
       "${' ' * 5}ERG Co.,Ltd was founded in 2006 as a Trading company and import diverse zinc coils into the local market. In 2014, due to high demand, the company was expanded into the field of manufacturing. Since then, we produce superior quailty materials and hand directly to both consumers and distributors.";

@@ -1,3 +1,4 @@
+import 'package:erg_web/shared/decorated_container.dart';
 import 'package:erg_web/shared/responsiveness.dart';
 import 'package:erg_web/shared/about_page_model.dart';
 import 'package:flutter/material.dart';
@@ -7,10 +8,7 @@ class AboutPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(20),
-      child: HistoryAndVision(),
-    );
+    return const HistoryAndVision();
   }
 }
 
@@ -27,11 +25,26 @@ class HistoryAndVision extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(
-          child: Center(
-            child: Text(
-              aboutPageTxt.historyTxt,
-              textAlign: TextAlign.justify,
-              textScaleFactor: isPhone ? 1.0 : 1.5,
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  'assets/about_page.jpg',
+                ),
+              ),
+            ),
+            child: Center(
+              child: CustomContainer(
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
+                child: Text(
+                  aboutPageTxt.historyTxt,
+                  textAlign: TextAlign.justify,
+                  style: AppTextStyle.descriptionTextStyle(context),
+                  textScaleFactor: isPhone ? 0.9 : 1.5,
+                ),
+              ),
             ),
           ),
         ),
@@ -39,37 +52,56 @@ class HistoryAndVision extends StatelessWidget {
           flex: 2,
           child: Padding(
             padding: isPhone
-                ? const EdgeInsets.all(0)
-                : const EdgeInsets.only(left: 100),
+                ? const EdgeInsets.all(15)
+                : const EdgeInsets.only(
+                    left: 100,
+                    right: 20,
+                    top: 20,
+                    bottom: 20,
+                  ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(
-                  'Our Vision',
-                  style: isPhone
-                      ? AppTextStyle.smallTitleStyle(context)
-                      : AppTextStyle.largeTitleStyle(context),
-                ),
-                Text(
-                  aboutPageTxt.visionTxt,
-                  textScaleFactor: isPhone ? 1.0 : 1.5,
-                  textAlign: TextAlign.justify,
-                ),
-                Text(
-                  'Our Missions',
-                  style: isPhone
-                      ? AppTextStyle.smallTitleStyle(context)
-                      : AppTextStyle.largeTitleStyle(context),
-                ),
-                ...aboutPageTxt.missionTxt
-                    .map(
-                      (e) => Text(
-                        e,
-                        textScaleFactor: isPhone ? 0.8 : 1.4,
+                Expanded(
+                  flex: 2,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Our Vision',
+                        style: isPhone
+                            ? AppTextStyle.smallTitleStyle(context)
+                            : AppTextStyle.largeTitleStyle(context),
+                      ),
+                      Text(
+                        aboutPageTxt.visionTxt,
+                        textScaleFactor: isPhone ? 1 : 1.4,
                         textAlign: TextAlign.justify,
                       ),
-                    )
-                    .toList(),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Our Missions',
+                        style: isPhone
+                            ? AppTextStyle.smallTitleStyle(context)
+                            : AppTextStyle.largeTitleStyle(context),
+                      ),
+                      ...aboutPageTxt.missionTxt
+                          .map(
+                            (e) => Text(
+                              e,
+                              textScaleFactor: isPhone ? 0.9 : 1.4,
+                              textAlign: TextAlign.justify,
+                            ),
+                          )
+                          .toList(),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

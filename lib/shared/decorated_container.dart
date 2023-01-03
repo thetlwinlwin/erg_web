@@ -19,7 +19,8 @@ class CustomContainer extends StatelessWidget {
       margin: margin,
       padding: padding,
       decoration: BoxDecoration(
-        color: color ?? Theme.of(context).colorScheme.secondaryContainer,
+        color: color ??
+            Theme.of(context).colorScheme.secondaryContainer.withOpacity(0.6),
         borderRadius: BorderRadius.circular(20),
       ),
       child: child,
