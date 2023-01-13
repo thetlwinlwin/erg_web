@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final maxWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       drawer: const MobileDrawer(),
       appBar: PreferredSize(
         preferredSize: maxWidth <= ScreenSize.tablet.maxWidth
