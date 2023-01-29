@@ -34,7 +34,7 @@ class MobileContactPage extends StatelessWidget {
             child: ContactForm(),
           ),
         ),
-        Footer(textSize: 12),
+        Footer(textSize: 18),
       ],
     );
   }
@@ -51,7 +51,7 @@ class DesktopContactPage extends StatelessWidget {
           alignment: Alignment.center,
           child: ContactForm(),
         ),
-        Footer(textSize: 16),
+        Footer(textSize: 22),
       ],
     );
   }
