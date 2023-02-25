@@ -2,6 +2,8 @@ import 'package:erg_web/shared/responsiveness.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+
+
 class Footer extends StatelessWidget {
   final double textSize;
   const Footer({
